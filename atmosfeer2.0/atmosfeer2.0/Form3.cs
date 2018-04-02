@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace atmosfeer2._0
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
-        public Form2()
+        public Form3()
         {
             InitializeComponent();
         }
 
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            Form3 form = new Form3();
+            Form1 form = new Form1();
             form.Show();
 
             this.Hide();
@@ -28,11 +33,17 @@ namespace atmosfeer2._0
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
+
+            Form2 form = new Form2();
+            form.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form4 form = new Form4();
+            form.Show();
+
+            this.Hide();
         }
     }
 }
