@@ -1,6 +1,6 @@
-﻿namespace SpotifyApp
+﻿namespace atmosfeer2._0
 {
-    partial class Form1
+    partial class Form6
     {
         /// <summary>
         /// Required designer variable.
@@ -94,7 +94,6 @@
             title4.Name = "Title1";
             title4.Text = "Kies een maand";
             this.chart1.Titles.Add(title4);
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // label1
             // 
@@ -113,7 +112,6 @@
             this.label2.Size = new System.Drawing.Size(125, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Gemiddelde temperatuur:";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // comboBox1
             // 
@@ -145,7 +143,6 @@
             this.label3.Size = new System.Drawing.Size(167, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Kies een maand";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -244,9 +241,8 @@
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.LimeGreen;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Form6";
+            this.Text = "Form6";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,4 +267,3 @@
         private System.Windows.Forms.Label label11;
     }
 }
-

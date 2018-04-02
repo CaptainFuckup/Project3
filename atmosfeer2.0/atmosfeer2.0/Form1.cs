@@ -503,5 +503,109 @@ namespace atmosfeer2._0
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn;
+            String connectionString = "Data Source=DESKTOP-IJQTUQ2\\SQLEXPRESS;Initial Catalog=Festival;Integrated Security=True";
+            conn = new SqlConnection(connectionString);
+            SqlCommand festival = new SqlCommand("SELECT Artiest, Festival, Locatie, Datum FROM dbo.Boef WHERE EXISTS(SELECT Festival, Datum FROM dbo.datafestival WHERE dbo.datafestival.Festival = dbo.Boef.Festival); ; ", conn);
+
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter();
+                sda.SelectCommand = festival;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbdataset;
+                dataGridView1.DataSource = bSource;
+                sda.Update(dbdataset);
+                //conn.Open();
+                //MessageBox.Show("Connection Open");
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            };
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Spotify.Series["Spotify"].Points.Add(1411569);
+            Spotify.Series["Spotify"].Points[0].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[0].AxisLabel = "Januari";
+            Spotify.Series["Spotify"].Points[0].Label = "1411569";
+
+            Spotify.Series["Spotify"].Points.Add(1189728);
+            Spotify.Series["Spotify"].Points[1].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[1].AxisLabel = "Februari";
+            Spotify.Series["Spotify"].Points[1].Label = "1189728";
+
+            Spotify.Series["Spotify"].Points.Add(42765615);
+            Spotify.Series["Spotify"].Points[2].Color = Color.Green;
+            Spotify.Series["Spotify"].Points[2].AxisLabel = "Maart";
+            Spotify.Series["Spotify"].Points[2].Label = "42765615";
+
+            Spotify.Series["Spotify"].Points.Add(34336932);
+            Spotify.Series["Spotify"].Points[3].Color = Color.Green;
+            Spotify.Series["Spotify"].Points[3].AxisLabel = "April";
+            Spotify.Series["Spotify"].Points[3].Label = "34336932";
+
+            Spotify.Series["Spotify"].Points.Add(14210676);
+            Spotify.Series["Spotify"].Points[4].Color = Color.Green;
+            Spotify.Series["Spotify"].Points[4].AxisLabel = "Mei";
+            Spotify.Series["Spotify"].Points[4].Label = "14210676";
+
+            Spotify.Series["Spotify"].Points.Add(8947547);
+            Spotify.Series["Spotify"].Points[5].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[5].AxisLabel = "Juni";
+            Spotify.Series["Spotify"].Points[5].Label = "8947547";
+
+            Spotify.Series["Spotify"].Points.Add(6092501);
+            Spotify.Series["Spotify"].Points[6].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[6].AxisLabel = "Juli";
+            Spotify.Series["Spotify"].Points[6].Label = "6092501";
+
+            Spotify.Series["Spotify"].Points.Add(4042745);
+            Spotify.Series["Spotify"].Points[7].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[7].AxisLabel = "Augustus";
+            Spotify.Series["Spotify"].Points[7].Label = "4042745";
+
+            Spotify.Series["Spotify"].Points.Add(3341391);
+            Spotify.Series["Spotify"].Points[8].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[8].AxisLabel = "September";
+            Spotify.Series["Spotify"].Points[8].Label = "3341391";
+
+            Spotify.Series["Spotify"].Points.Add(2373805);
+            Spotify.Series["Spotify"].Points[9].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[9].AxisLabel = "Oktober";
+            Spotify.Series["Spotify"].Points[9].Label = "2373805";
+
+            Spotify.Series["Spotify"].Points.Add(1862738);
+            Spotify.Series["Spotify"].Points[10].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[10].AxisLabel = "November";
+            Spotify.Series["Spotify"].Points[10].Label = "1862738";
+
+            Spotify.Series["Spotify"].Points.Add(3670453);
+            Spotify.Series["Spotify"].Points[11].Color = Color.Red;
+            Spotify.Series["Spotify"].Points[11].AxisLabel = "December";
+            Spotify.Series["Spotify"].Points[11].Label = "3670453";
+            //Spotify.Series["Spotify"].Points.AddXY("Januari", 1411569);
+            //Spotify.Series["Spotify"].Points.AddXY("Februari", 1189728);
+            //Spotify.Series["Spotify"].Points.AddXY("Maart", 42765615);
+            //Spotify.Series["Spotify"].Points.AddXY("April", 34336932);
+            //Spotify.Series["Spotify"].Points.AddXY("Mei", 14210676);
+            //Spotify.Series["Spotify"].Points.AddXY("Juni", 8947547);
+            //Spotify.Series["Spotify"].Points.AddXY("Juli", 6092501);
+            //Spotify.Series["Spotify"].Points.AddXY("Augustus", 4042745);
+            //Spotify.Series["Spotify"].Points.AddXY("September", 3341391);
+            //Spotify.Series["Spotify"].Points.AddXY("Oktober", 2373805);
+            //Spotify.Series["Spotify"].Points.AddXY("November", 1862738);
+            //Spotify.Series["Spotify"].Points.AddXY("December", 3670453);
+        }
     }
 }

@@ -32,7 +32,28 @@ namespace atmosfeer2._0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Form6 form = new Form6();
+            form.Show();
+
+            this.Hide();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form3 form = new Form3();
+            form.Show();
+
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Form6 form = new Form6();
+            form.Show();
+
+            this.Hide();
+        }
+
+       
     }
 }
