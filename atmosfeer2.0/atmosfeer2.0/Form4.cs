@@ -527,5 +527,10 @@ namespace atmosfeer2._0
         {
 
         }
+
+        private void Spotify_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
