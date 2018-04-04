@@ -31,7 +31,7 @@ namespace atmosfeer2._0
         private void button1_Click(object sender, EventArgs e)
         {
             SqlConnection conn;
-            String connectionString = "Data Source=DESKTOP-IJQTUQ2\\SQLEXPRESS;Initial Catalog=Festival;Integrated Security=True";
+            String connectionString = "Data Source=DESKTOP-SS9SKAH;Initial Catalog=Festival;Integrated Security=True";
             conn = new SqlConnection(connectionString);
             SqlCommand festival = new SqlCommand("SELECT Artiest, Festival, Locatie, Datum FROM dbo.lilkleine$ WHERE EXISTS(SELECT Festival, Datum FROM dbo.datafestival WHERE dbo.datafestival.Festival = dbo.lilkleine$.Festival); ; ", conn);
 
@@ -123,20 +123,20 @@ namespace atmosfeer2._0
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             SqlConnection conn;
-            String connectionString = "Data Source=DESKTOP-IJQTUQ2\\SQLEXPRESS;Initial Catalog=Festival;Integrated Security=True";
+            String connectionString = "Data Source=DESKTOP-SS9SKAH;Initial Catalog=Festival;Integrated Security=True";
             conn = new SqlConnection(connectionString);
-            SqlCommand kleine1 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-01-01' AND '2017-01-31' ORDER BY Datum; ", conn);
-            SqlCommand kleine2 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-02-01' AND '2017-02-28' ORDER BY Datum; ", conn);
-            SqlCommand kleine3 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-03-01' AND '2017-03-31' ORDER BY Datum; ", conn);
-            SqlCommand kleine4 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-04-01' AND '2017-04-30' ORDER BY Datum; ", conn);
-            SqlCommand kleine5 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-05-01' AND '2017-05-31' ORDER BY Datum; ", conn);
-            SqlCommand kleine6 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-06-01' AND '2017-06-30' ORDER BY Datum; ", conn);
-            SqlCommand kleine7 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-07-01' AND '2017-07-31' ORDER BY Datum; ", conn);
-            SqlCommand kleine8 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-08-01' AND '2017-08-31' ORDER BY Datum; ", conn);
-            SqlCommand kleine9 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-09-01' AND '2017-09-30' ORDER BY Datum; ", conn);
-            SqlCommand kleine10 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-10-01' AND '2017-10-31' ORDER BY Datum; ", conn);
-            SqlCommand kleine11 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-11-01' AND '2017-11-30' ORDER BY Datum; ", conn);
-            SqlCommand kleine12 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.NLTop200 WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-12-01' AND '2017-12-31' ORDER BY Datum; ", conn);
+            SqlCommand kleine1 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-01-01' AND '2017-01-31' ORDER BY Datum; ", conn);
+            SqlCommand kleine2 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-02-01' AND '2017-02-28' ORDER BY Datum; ", conn);
+            SqlCommand kleine3 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-03-01' AND '2017-03-31' ORDER BY Datum; ", conn);
+            SqlCommand kleine4 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-04-01' AND '2017-04-30' ORDER BY Datum; ", conn);
+            SqlCommand kleine5 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-05-01' AND '2017-05-31' ORDER BY Datum; ", conn);
+            SqlCommand kleine6 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-06-01' AND '2017-06-30' ORDER BY Datum; ", conn);
+            SqlCommand kleine7 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-07-01' AND '2017-07-31' ORDER BY Datum; ", conn);
+            SqlCommand kleine8 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-08-01' AND '2017-08-31' ORDER BY Datum; ", conn);
+            SqlCommand kleine9 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-09-01' AND '2017-09-30' ORDER BY Datum; ", conn);
+            SqlCommand kleine10 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-10-01' AND '2017-10-31' ORDER BY Datum; ", conn);
+            SqlCommand kleine11 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-11-01' AND '2017-11-30' ORDER BY Datum; ", conn);
+            SqlCommand kleine12 = new SqlCommand("SELECT Artiest, Nummer, Geluisterd, Datum FROM dbo.Spotify WHERE Artiest = 'Lil Kleine' AND Datum BETWEEN '2017-12-01' AND '2017-12-31' ORDER BY Datum; ", conn);
 
             switch (trackBar1.Value)
             {
@@ -497,7 +497,7 @@ namespace atmosfeer2._0
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             SqlConnection conn;
-            String connectionString = "Data Source=DESKTOP-IJQTUQ2\\SQLEXPRESS;Initial Catalog=Festival;Integrated Security=True";
+            String connectionString = "Data Source=DESKTOP-SS9SKAH;Initial Catalog=Festival;Integrated Security=True";
             conn = new SqlConnection(connectionString);
             SqlCommand festival = new SqlCommand("SELECT Artiest, Festival, Locatie, Datum FROM dbo.lilkleine$ WHERE EXISTS(SELECT Festival, Datum FROM dbo.datafestival WHERE dbo.datafestival.Festival = dbo.lilkleine$.Festival); ; ", conn);
 
