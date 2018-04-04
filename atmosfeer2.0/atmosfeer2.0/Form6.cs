@@ -137,5 +137,10 @@ namespace atmosfeer2._0
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
