@@ -22,7 +22,7 @@ namespace atmosfeer2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnection1 = new SqlConnection("Data Source=DESKTOP-IJQTUQ2\\SQLEXPRESS;Initial Catalog=Festival;Integrated Security=True");
+            SqlConnection sqlConnection1 = new SqlConnection("Data Source=DESKTOP-SS9SKAH;Initial Catalog=Festival;Integrated Security=True");
             SqlCommand cmd = new SqlCommand();
             SqlDataReader reader;
             if (comboBox1.SelectedIndex > -1)
@@ -136,6 +136,13 @@ namespace atmosfeer2._0
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 form = new Form2();
+            form.Show();
         }
     }
 }
